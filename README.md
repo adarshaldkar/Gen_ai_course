@@ -25,13 +25,15 @@ gen_ai_course/
 │   ├── day7/                # ReAct (Reasoning + Acting) Autonomous Agent Loop
 │   ├── day8/                # Multi-Step Prompt Chaining Pipelines
 │   └── day9/                # 🏆 Mini-Project: AI Candidate Interviewer API (FastAPI)
-└── week3/                   # Week 3: Embeddings, Vector DBs & RAG Architecture
-    ├── day10/               # Retrieval-Augmented Generation (RAG) Basics
-    ├── day11/               # Dense Embeddings & Cosine Similarity (SentenceTransformer)
-    ├── day12/               # Embedded RAG Pipeline
-    ├── day14/               # Qdrant Vector Database Integration
-    ├── day15/               # Metadata Payload Filtering in Qdrant
-    └── day16/               # Text Chunking Strategies (Fixed, Paragraph, Recursive)
+├── week3/                   # Week 3: Embeddings, Vector DBs & RAG Architecture
+│   ├── day10/               # Retrieval-Augmented Generation (RAG) Basics
+│   ├── day11/               # Dense Embeddings & Cosine Similarity (SentenceTransformer)
+│   ├── day12/               # Embedded RAG Pipeline
+│   ├── day14/               # Qdrant Vector Database Integration
+│   ├── day15/               # Metadata Payload Filtering in Qdrant
+│   └── day16/               # Text Chunking Strategies (Fixed, Paragraph, Recursive)
+└── week4/                   # Week 4: Advanced Tool-Use Agents & Autonomous Systems
+    └── day17/               # 🤖 Function-Calling AI Agent (Tavily Web Search & Math Evaluator)
 ```
 
 ---
@@ -42,6 +44,7 @@ gen_ai_course/
 | :--- | :--- | :--- |
 | **Package Manager** | `uv` | Blazing fast Python package and environment manager |
 | **Inference Engine** | `Groq SDK` | High-throughput LLM inference using LLaMA models |
+| **Web Search API** | `Tavily Search` | Real-time web search API for AI agents |
 | **Vector DB** | `Qdrant` | High-performance vector database with payload filtering |
 | **Embeddings** | `SentenceTransformer` | Local dense vector embeddings (`all-MiniLM-L6-v2`) |
 | **Text Splitters** | `langchain-text-splitters` | Chunking strategies for RAG optimization |
@@ -62,6 +65,7 @@ cd Gen_ai_course
 Create a `.env` file in the project root:
 ```env
 GROQ_API_KEY=your_groq_api_key_here
+TAVILY_API_KEY=your_tavily_api_key_here
 QDRANT_URL=https://your-qdrant-cluster-url.qdrant.io
 QDRANT_API_KEY=your_qdrant_api_key_here
 ```
@@ -69,14 +73,15 @@ QDRANT_API_KEY=your_qdrant_api_key_here
 ### 3. Run Any Day's Module
 Navigate to the specific day and run with `uv`:
 ```bash
-cd "week3/day16"
-uv run python .\chunk.py
+cd "week4/day17"
+uv run python .\ai_agent.py
 ```
 
 ---
 
 ## 🌟 Key Project Highlights
 
+- **🛠️ Function-Calling AI Agent (`week 4/day17`)**: Built an autonomous tool-calling AI agent supporting multi-tool execution with Tavily live web search and Python AST math evaluator.
 - **🤖 Custom ReAct Agent (`week 2/day7`)**: Implements an autonomous agent reasoning loop (`Thought` $\rightarrow$ `Action` $\rightarrow$ `Observation` $\rightarrow$ `Final Answer`) from scratch using custom tool bindings.
 - **📄 Resume Parser & Matcher (`week 1/day5`)**: Extracts structured JSON from PDF/DOCX resumes using Pydantic schemas and scores candidate compatibility against job descriptions.
 - **⚡ Qdrant Vector DB RAG (`week 3/day14` & `day15`)**: Builds end-to-end vector retrieval pipelines featuring metadata filtering (`PayloadSchemaType.KEYWORD`).
