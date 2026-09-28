@@ -34,7 +34,8 @@ gen_ai_course/
 │   └── day16/               # Text Chunking Strategies (Fixed, Paragraph, Recursive)
 └── week4/                   # Week 4: Advanced Tool-Use Agents & Autonomous Systems
     ├── day17/               # 🤖 Function-Calling AI Agent (Tavily Web Search & Math Evaluator)
-    └── day18/               # 🕸️ LangGraph Intro (StateGraph & Conditional Loop Control)
+    ├── day18/               # 🕸️ LangGraph Intro (StateGraph & Conditional Loop Control)
+    └── day19_miniproject/   # 🏆 Mini-Project: Restaurant Order Management LangGraph Agent
 ```
 
 ---
@@ -75,17 +76,17 @@ QDRANT_API_KEY=your_qdrant_api_key_here
 ### 3. Run Any Day's Module
 Navigate to the specific day and run with `uv`:
 ```bash
-cd "week4/day18"
-uv run python .\langgraphintro.py
+cd "week4/day19_miniproject"
+uv run python .\restproject.py
 ```
 
 ---
 
 ## 🌟 Key Project Highlights
 
+- **🍕 Restaurant LangGraph Agent (`week 4/day19_miniproject`)**: Built a multi-node interactive order management workflow agent (`user_input` $\rightarrow$ `llm` $\rightarrow$ `order_confirm` $\rightarrow$ `cook` $\rightarrow$ `serve`) using LangGraph.
 - **🕸️ LangGraph StateGraph Architecture (`week 4/day18`)**: Implemented cyclic stateful graphs using `TypedDict` state, conditional edges (`add_conditional_edges`), and dynamic node transitions.
 - **🛠️ Function-Calling AI Agent (`week 4/day17`)**: Built an autonomous tool-calling AI agent supporting multi-tool execution with Tavily live web search and Python AST math evaluator.
-- **🤖 Custom ReAct Agent (`week 2/day7`)**: Implements an autonomous agent reasoning loop (`Thought` $\rightarrow$ `Action` $\rightarrow$ `Observation` $\rightarrow$ `Final Answer`) from scratch using custom tool bindings.
 - **📄 Resume Parser & Matcher (`week 1/day5`)**: Extracts structured JSON from PDF/DOCX resumes using Pydantic schemas and scores candidate compatibility against job descriptions.
 - **⚡ Qdrant Vector DB RAG (`week 3/day14` & `day15`)**: Builds end-to-end vector retrieval pipelines featuring metadata filtering (`PayloadSchemaType.KEYWORD`).
 - **🧩 Text Chunking Strategies (`week 3/day16`)**: Evaluates Fixed-Size, Paragraph, and Recursive Character chunking methods for RAG accuracy.
