@@ -32,10 +32,12 @@ gen_ai_course/
 │   ├── day14/               # Qdrant Vector Database Integration
 │   ├── day15/               # Metadata Payload Filtering in Qdrant
 │   └── day16/               # Text Chunking Strategies (Fixed, Paragraph, Recursive)
-└── week4/                   # Week 4: Advanced Tool-Use Agents & Autonomous Systems
-    ├── day17/               # 🤖 Function-Calling AI Agent (Tavily Web Search & Math Evaluator)
-    ├── day18/               # 🕸️ LangGraph Intro (StateGraph & Conditional Loop Control)
-    └── day19_miniproject/   # 🏆 Mini-Project: Restaurant Order Management LangGraph Agent
+├── week4/                   # Week 4: Advanced Tool-Use Agents & Autonomous Systems
+│   ├── day17/               # 🤖 Function-Calling AI Agent (Tavily Web Search & Math Evaluator)
+│   ├── day18/               # 🕸️ LangGraph Intro (StateGraph & Conditional Loop Control)
+│   └── day19_miniproject/   # 🏆 Mini-Project: Restaurant Order Management LangGraph Agent
+└── week5/                   # Week 5: Multi-Agent Systems & Token Efficiency Benchmarks
+    └── day20/               # 📊 Single Agent vs Multi-Agent Token Efficiency Benchmark
 ```
 
 ---
@@ -84,6 +86,7 @@ uv run python .\restproject.py
 
 ## 🌟 Key Project Highlights
 
+- **📊 Single Agent vs Multi-Agent Token Efficiency Benchmark (`week5/day20`)**: Designed an empirical benchmark framework evaluating token consumption, execution latency, and context overhead between Single ReAct Agent and Multi-Agent Orchestrator with file-based shared memory (`notes.md`).
 - **🍕 Restaurant LangGraph Agent (`week 4/day19_miniproject`)**: Built a multi-node interactive order management workflow agent (`user_input` $\rightarrow$ `llm` $\rightarrow$ `order_confirm` $\rightarrow$ `cook` $\rightarrow$ `serve`) using LangGraph.
 - **🕸️ LangGraph StateGraph Architecture (`week 4/day18`)**: Implemented cyclic stateful graphs using `TypedDict` state, conditional edges (`add_conditional_edges`), and dynamic node transitions.
 - **🛠️ Function-Calling AI Agent (`week 4/day17`)**: Built an autonomous tool-calling AI agent supporting multi-tool execution with Tavily live web search and Python AST math evaluator.
